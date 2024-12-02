@@ -21,10 +21,30 @@ class Client(commands.Bot):
             return
 
         if message.content.startswith('hello'):
-            await message.channel.send(f":zap:**BZZT**:zap: Hello! **{message.author}**! I am Rotom, your interactive pokemon index!")
+            await message.channel.send(f":zap:**BZZT**:zap: Hello! **{message.author}**! I am Rotom, your personal Pokédex!")
+
+        if message.content.startswith('ro charizard'):
+            #Charizard Dex Entry
+            await message.channel.send("Charizard, the Fire/Flying type Pokemon")
+            await message.channel.send("Dex entry NO.006")
+
+            num = random.randint(1, 3)
+
+            if num == 1:
+                await message.channel.send("Charizard tend to live in mountains and even inhabit volcanoes with others of its species!")
+
+            if num == 2:
+                await message.channel.send("Charizard fly around in search of strong opponents, with its fire on its tail burning brighter with gained experience!")
+                await message.channel.send("They will never fight anything weaker than themselves.")
+
+            if num == 3:
+                await message.channel.send("A Charizard's fiery breath can melt boulders and huge glaciers.")
+                await message.channel.send("It's also been known to accidentally start forrest fires!")
+
 
     async def on_reaction_add(self, reaction, user):
         await reaction.message.channel.send('Thank you for the reaction!')
+
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -41,5 +61,5 @@ async def sayHello(interaction: discord.Interaction):
 async def sayHello(interaction: discord.Interaction, printer: str):
     await interaction.response.send_message(printer)
 
-client.run('MTMxMjU1NzMzMzMzOTE4MTEyNg.GlooGo.LlEaUeW18bMGA0n5CvE72tKubo-3SZpLmIAAQY')
+client.run('')
 

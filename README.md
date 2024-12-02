@@ -1,2 +1,2 @@
 # RotomBot
- A discord bot that functions as a pokedex for your server!
+ A discord bot that functions as a Pokédex for your server!

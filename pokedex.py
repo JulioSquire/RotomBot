@@ -1,5 +1,8 @@
 #Here will be different functions for the bot to use when it's asked to give a dex entry for Pokémon.
 import random
+import discord
+from discord.ext import commands
+
 
 def bulbasaur():
     print("Bulbasaur, the Grass/Poison type pokémon.")
@@ -77,22 +80,22 @@ def charmeleon():
         print("A Charmeleon will use the fire on its tail to raise the temperature around it, tormenting the opponent with a hot atmosphere!.")
 
 def charizard():
-    print("Charizard, the Fire type pokémon.")
+    print("Charizard, the Fire/Flying type pokémon.")
     print("Pokédex entry NO.006")
     num = random.randint(1,3)
 
     if num == 1:
-        print("Charizard tend to live in mountains, and even inhabit volcanoes with others of its species!")
+        print("Charizard tend to live in mountains and even inhabit volcanoes with others of its species!")
 
     if num == 2:
         print("Charizard fly around in search of strong opponents, with its fire on its tail burning brighter with gained experience!")
-        print("They will never fight anything weaker than itself.")
+        print("They will never fight anything weaker than themselves.")
 
     if num == 3:
         print("A Charizard's fiery breath can melt boulders and huge glaciers.")
         print("It's also been known to accidentally start forrest fires!")
 
-pokelist = [bulbasaur, ivysaur, venusaur, charmander, charmeleon, charizard, squirtle, wartortle, blastoise, pikachu]
+pokelist = [bulbasaur, ivysaur, venusaur, charmander, charmeleon, charizard,]
 
 
 '''
