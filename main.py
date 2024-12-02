@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from discord import app_commands
+from pokedex import *
 
 class Client(commands.Bot):
     async def on_ready(self):
