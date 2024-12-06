@@ -1,6 +1,3 @@
-import discord
-from discord.ext import commands
-from discord import app_commands
 from imports import *
 
 class Client(commands.Bot):
@@ -23,11 +20,15 @@ class Client(commands.Bot):
         if message.content.startswith('!ro hello'):
             await message.channel.send(f":zap:**BZZT**:zap: Hello, **{message.author}**! I am Rotom, your personal Pokédex!")
 
-        if message.content.startswith('!ro pokedex'):
+        if message.content.startswith('!ro pokemon'):
             await message.channel.send("filler for later")
 
+        if message.content.startswith('!ro entries'):
+            await message.channel.send("Currently, I have dex entries for these Pokémon:")
+
+        #Gen 1 Starters
         if message.content.startswith('!ro bulbasaur'):
-            await message.channel.send("Bulbasaur, the Grass/Poison type pokémon.")
+            await message.channel.send("Bulbasaur, the Grass/Poison type Pokémon.")
             await message.channel.send("Pokédex entry NO.001")
             num = random.randint(1, 3)
 
@@ -56,7 +57,7 @@ class Client(commands.Bot):
                 await message.channel.send("When an Ivysaur's flower is ready to bloom, it will give off a sweet-smelling scent and will start to swell.")
 
         if message.content.startswith('!ro venusaur'):
-            await message.channel.send("Venusaur, the Grass/Poison type pokémon.")
+            await message.channel.send("Venusaur, the Grass/Poison type Pokémon.")
             await message.channel.send("Pokédex entry NO.003")
             num = random.randint(1, 3)
 
@@ -72,7 +73,7 @@ class Client(commands.Bot):
                 await message.channel.send("Breathing in too much can cause you to faint, so be careful!")
 
         if message.content.startswith('!ro charmander'):
-            await message.channel.send("Charmander, the Fire type pokémon.")
+            await message.channel.send("Charmander, the Fire type Pokémon.")
             await message.channel.send("Pokédex entry NO.004")
             num = random.randint(1, 3)
 
@@ -87,7 +88,7 @@ class Client(commands.Bot):
                 await message.channel.send("Charmander like to behave in packs, finding food and making sure each other's tails stay lit!")
 
         if message.content.startswith('!ro charmeleon'):
-            await message.channel.send("Charmeleon, the Fire type Pokémon!")
+            await message.channel.send("Charmeleon, the Fire type Pokémon.")
             await message.channel.send("Pokédex entry NO.005")
             num = random.randint(1, 3)
 
@@ -101,10 +102,9 @@ class Client(commands.Bot):
             if num == 3:
                 await message.channel.send("A Charmeleon will use the fire on its tail to raise the temperature around it, tormenting the opponent with a hot atmosphere!")
 
-        if message.content.startswith('!ro charizard'): #Charizard
-            #Charizard Dex Entry
-            await message.channel.send("Charizard, the Fire/Flying type Pokemon")
-            await message.channel.send("Dex entry NO.006")
+        if message.content.startswith('!ro charizard'):
+            await message.channel.send("Charizard, the Fire/Flying type Pokémon")
+            await message.channel.send("Pokédex entry NO.006")
 
             num = random.randint(1, 3)
 
@@ -119,9 +119,140 @@ class Client(commands.Bot):
                 await message.channel.send("A Charizard's fiery breath can melt boulders and huge glaciers.")
                 await message.channel.send("It's also been known to accidentally start forrest fires!")
 
+        if message.content.startswith('!ro squirtle'):
+            await message.channel.send("Squirtle, the Water type Pokémon.")
+            await message.channel.send("Pokédex entry NO.007")
 
+            num = random.randint(1, 4)
 
+            if num == 1:
+                await message.channel.send("At birth, a squirtle's shell is really soft.")
+                await message.channel.send("But, moments after its birth, it hardens and becomes super resilient!")
 
+            if num == 2:
+                await message.channel.send("The shape of a squirtle's shell is water resistant, allowing them to swim at high speeds!")
+
+            if num == 3:
+                await message.channel.send("Squirtle are able to shoot water from their mouths with high accuracy.")
+
+            if num == 4:
+                await message.channel.send("When they sleep, squirtle withdraw into their shells.")
+                await message.channel.send("They do this as protection from predators as they rest.")
+                await message.channel.send("They even sometimes rock back and forth in their shells when content!")
+
+        if message.content.startswith('!ro wartortle'):
+            await message.channel.send("Wartortle, the Water type Pokémon")
+            await message.channel.send("Pokédex entry NO.008")
+
+            num = random.randint(1, 3)
+
+            if num == 1:
+                await message.channel.send("Wartortle's flowing tail is a symbol of longevity and good fortune, which makes it popular among elderly people!")
+
+            if num == 2:
+                await message.channel.send("Because they're bigger than their previous form, they have a harder time finding balance.")
+                await message.channel.send("To counteract this, they use their fluffy ears to keep upright, and they do this both on land and in water!")
+
+            if num == 3:
+                await message.channel.send("As it sleeps, it keeps its furry tail poking out of its shell,")
+                await message.channel.send("It does this to feel out its surroundings in case of danger!")
+
+        if message.content.startswith('!ro blastoise'):
+            await message.channel.send("Blastoise, the Water type Pokémon.")
+            await message.channel.send("Pokédex entry NO.009")
+
+            num = random.randint(1, 3)
+
+            if num == 1:
+                await message.channel.send("A shoot from the cannon of a blastoise is enough to pierce steel and concrete!")
+
+            if num == 2:
+                await message.channel.send("Blastoise have sturdy legs and backs,")
+                await message.channel.send("This allows them to withstand the recoil that their cannons produce!")
+
+            if num == 3:
+                await message.channel.send("Blastoise are able to propel themselves forward with their cannons, allowing for a devastating tackle!")
+
+        #Gen 2 Starters
+        if message.content.startswith("!ro chikorita"):
+            await message.channel.send("Chikorita, the Grass type Pokémon")
+            await message.channel.send("Pokédex entry NO.152")
+
+            num = random.randint(1, 3)
+
+            if num == 1:
+                await message.channel.send("Chikorita use the leaf on their heads to seek out warm places to sleep!")
+
+            if num == 2:
+                await message.channel.send("The leaf on a chikorita gives off a pleasant aroma able to calm down battling pokémon!")
+
+            if num == 3:
+                await message.channel.send("Chikorita love to sunbathe, making it common to see them in grassy fields on a sunny day!")
+
+        if message.content.startswith("!ro bayleef"):
+            await message.channel.send("Bayleef, the Grass type Pokémon")
+            await message.channel.send("Pokédex entry NO.153")
+
+            num = random.randint(1, 3)
+
+            if num == 1:
+                await message.channel.send("Its leaves give off a spicy scent which has many benefits.")
+                await message.channel.send("These benefits include a boost in energy and health!")
+
+            if num == 2:
+                await message.channel.send("Pokémon that rest near bayleef usually tend to feel energized and ready to fight!")
+
+            if num == 3:
+                await message.channel.send("It's rumored that a bayleef bud's properties contrast to actual bay leaves!")
+
+        if message.content.startswith("!ro meganium"):
+            await message.channel.send("Meganium, the Grass type Pokémon.")
+            await message.channel.send("Pokédex entry NO.154")
+
+            num = random.randint(1, 3)
+
+            if num == 1:
+                await message.channel.send("Meganium give off a pleasant aroma that's said to make someone feel as if they're in the soothing atmosphere of a forest!")
+
+            if num == 2:
+                await message.channel.send("Its breath contains the power to revive plants and nature that have withered away!")
+
+            if num == 3:
+                await message.channel.send("Meganium tend to be very docile, and are known to be peacemakers!")
+
+        if message.content.startswith("!ro cyndaquil"):
+            await message.channel.send("Cyndaquil, the Fire type Pokémon.")
+            await message.channel.send("Pokédex entry NO.155")
+
+            num = random.randint(1, 3)
+
+            if num == 1:
+                await message.channel.send("Cyndaquil shoot flames out of their backs when startled or angered.")
+                await message.channel.send("These flames intimidate their foes!")
+
+            if num == 2:
+                await message.channel.send("Cyndaquil are usually hunch over.")
+                await message.channel.send("They do this as they tend to curl up when they feel intimidated.")
+
+            if num == 3:
+                await message.channel.send("Cyndaquil like to curl up when they sleep, and occasionally spout flames in their slumber!")
+
+        if message.content.startswith("!ro quilava"):
+            await message.channel.send("Quilava, the Fire type Pokémon.")
+            await message.channel.send("Pokédex entry NO.156")
+
+            num = random.randint(1, 3)
+
+            if num == 1:
+                await message.channel.send("Before battle, quilava like to show off how fierce the fire on their backs can burn!")
+
+            if num == 2:
+                await message.channel.send("The fur of this pokémon is said to never burn, and can protect it from other fire attacks!")
+
+            if num == 3:
+                await message.channel.send("As they sleep, the flames on their back burn bright!")
+
+    #éééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééé
 
     async def on_reaction_add(self, reaction, user):
         await reaction.message.channel.send('Thank you for the reaction!')
