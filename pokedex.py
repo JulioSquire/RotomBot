@@ -21,10 +21,15 @@ class Client(commands.Bot):
             await message.channel.send(f":zap:**BZZT**:zap: Hello, **{message.author}**! I am Rotom, your personal Pokédex!")
 
         if message.content.startswith('!ro pokemon'):
-            await message.channel.send("filler for later")
+            await message.channel.send("Pokémon are mysterious creatures. They reside in every corner of our world. From the skies, to the forrest, and even the mountains. Humans and Pokémon share a mutualistic relationship, coexisting and helping one another to live and thrive!")
+            await message.channel.send("In short, Pokémon are our companions!")
 
         if message.content.startswith('!ro entries'):
             await message.channel.send("Currently, I have dex entries for these Pokémon:")
+            await message.channel.send("Bulbasaur, Ivysaur, Venusaur, Charmander, Charmeleon, Charizard, Squirtle, Wartortle, Blastoise, Chikorita, Bayleef, Meganium, Cyndaquil, Quilava, Typhlosion, Totodile, Croconaw, Feraligatr.")
+            await message.channel.send("To ask for an entry for a Pokémon, say '!ro' along with the name of the pokémon in all lowercase letters!")
+            await message.channel.send("For example, you could say **'!ro bulbasaur'** !")
+
 
         #Gen 1 Starters
         if message.content.startswith('!ro bulbasaur'):
@@ -251,6 +256,70 @@ class Client(commands.Bot):
 
             if num == 3:
                 await message.channel.send("As they sleep, the flames on their back burn bright!")
+
+        if message.content.startswith("!ro typhlosion"):
+            await message.channel.send("Typhlosion, the Fire type Pokémon.")
+            await message.channel.send("Pokédex entry NO.157")
+
+            num = random.randint(1, 3)
+
+            if num == 1:
+                await message.channel.send("When a typhlosion's anger peaks, it is able to become so hot that anything that it comes in contact with will instantly burn up!")
+
+            if num == 2:
+                await message.channel.send("Typhlosion are able to create a shimmering haze that they use to hide themselves during battle!")
+
+            if num == 3:
+                await message.channel.send("It's recommended to avoid a typhlosion that's asleep, as they tend to accidentally shoot fire from their backs!")
+
+        if message.content.startswith("!ro totodile"):
+            await message.channel.send("Totodile, the Water type Pokémon.")
+            await message.channel.send("Pokédex entry NO.158")
+
+            num = random.randint(1, 3)
+
+            if num == 1:
+                await message.channel.send("Totodile tend to bite down on anything they see, even their own trainer!")
+
+            if num == 2:
+                await message.channel.send("A totodile's bite force is enough to bite through anything, which can cause devastating injuries!")
+
+            if num == 3:
+                await message.channel.send("Totodile tend to sleep with one eye open and rest only half of their brain at a time!")
+                await message.channel.send("This is a practice known as unihemispheric sleep!")
+
+        if message.content.startswith("!ro croconaw"):
+            await message.channel.send("Croconaw, the Water type Pokémon.")
+            await message.channel.send("Pokédex entry NO.159")
+
+            num = random.randint(1, 3)
+
+            if num == 1:
+                await message.channel.send("The tips of a croconaw's fangs are slanted backward, allowing no chance of escape for its prey!")
+
+            if num == 2:
+                await message.channel.send("A croconaw is able to regrow its teeth in the case it loses some in an encounter!")
+                await message.channel.send("There seems to be no limit to how many times they can grow back!")
+
+            if num == 3:
+                await message.channel.send("Although it may seem that they only have 6 sharp teeth, a croconaw's mouth is lined with a total of 48 fangs!")
+
+        if message.content.startswith("!ro feraligatr"):
+            await message.channel.send("Feraligatr, the Water type Pokémon")
+            await message.channel.send("Pokédex entry NO.160")
+
+            num = random.randint(1, 3)
+
+            if num == 1:
+                await message.channel.send("When a feraligatr bits into its opponent, it viciously whips its head around to tear them apart!")
+
+            if num == 2:
+                await message.channel.send("Its powerful hind legs allow it to quickly move around on both land and in water!")
+
+            if num == 3:
+                await message.channel.send("Feraligatr continues to practice unihemispheric sleep, keeping watch of its surroundings and charging towards any threats it may sense!")
+
+    #    if message.content.startswith("!ro past typhlosion"):
 
     #éééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééé
 
