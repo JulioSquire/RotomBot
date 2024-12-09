@@ -342,7 +342,5 @@ async def sayHello(interaction: discord.Interaction):
 async def sayHello(interaction: discord.Interaction, printer: str):
     await interaction.response.send_message(printer)
 
-token = os.getenv("DISCORD_TOKEN")
 
-client.run(token)
-
+client.run("")
