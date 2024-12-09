@@ -63,7 +63,7 @@ class Client(commands.Bot):
                 await message.channel.send("This scent becomes stronger after a rainy day!")
 
             if num == 2:
-                await message.channel.send("Venusaur tend be stronger during the summertime, as there is more sunlight for them to absorb during that time.")
+                await message.channel.send("Venusaur tend be stronger during the summertime, as there is more sunlight for them to absorb during that season.")
 
             if num == 3:
                 await message.channel.send("Venusaur can shoot out huge amounts of pollen from their bulbs.")
