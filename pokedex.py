@@ -5,14 +5,6 @@ class Client(commands.Bot):
         print(f'Logged in as {self.user}!')
 
 
-        try:
-            guild = discord.Object(id=860069193402548224)
-            synced = await self.tree.sync(guild=guild)
-            print(f'Synced {len(synced)} commands to guild {guild.id}!')
-
-        except Exception as e:
-            print(f'Error sycning commands: {e}')
-
     async def on_message(self, message):
         if message.author == self.user:
             return
@@ -21,7 +13,7 @@ class Client(commands.Bot):
             await message.channel.send(f":zap:**BZZT**:zap: Hello, **{message.author}**! I am Rotom, your personal Pokédex!")
 
         if message.content.startswith('!ro pokemon'):
-            await message.channel.send("Pokémon are mysterious creatures. They reside in every corner of our world. From the skies, to the forrest, and even the mountains. Humans and Pokémon share a mutualistic relationship, coexisting and helping one another to live and thrive!")
+            await message.channel.send("Pokémon are mysterious creatures. They reside in every corner of our world. From the skies, to the forrest, and even the mountains. Humans and Pokémon share a mutualistic relationship, coexisting and helping one another live and thrive!")
             await message.channel.send("In short, Pokémon are our companions!")
 
         if message.content.startswith('!ro entries'):
@@ -319,10 +311,6 @@ class Client(commands.Bot):
             if num == 3:
                 await message.channel.send("Feraligatr continues to practice unihemispheric sleep, keeping watch of its surroundings and charging towards any threats it may sense!")
 
-    #    if message.content.startswith("!ro past typhlosion"):
-
-    #éééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééé
-
     async def on_reaction_add(self, reaction, user):
         await reaction.message.channel.send('Thank you for the reaction!')
 
@@ -330,17 +318,5 @@ class Client(commands.Bot):
 intents = discord.Intents.default()
 intents.message_content = True
 client = Client(command_prefix='!ro', intents=intents)
-
-
-GUILD_ID = discord.Object(id=860069193402548224)
-
-@client.tree.command(name='hi', description='Makes Rotom say Hello!', guild=GUILD_ID)
-async def sayHello(interaction: discord.Interaction):
-    await interaction.response.send_message(f'Hello there! How are you?')
-
-@client.tree.command(name='printer', description='Makes Rotom say what you said!', guild=GUILD_ID)
-async def sayHello(interaction: discord.Interaction, printer: str):
-    await interaction.response.send_message(printer)
-
 
 client.run("")
