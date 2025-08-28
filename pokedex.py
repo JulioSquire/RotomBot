@@ -1,6 +1,7 @@
 from imports import *
 
 #LOLOLOLOL
+#LOLpt2
 
 class Client(commands.Bot):
     async def on_ready(self):
